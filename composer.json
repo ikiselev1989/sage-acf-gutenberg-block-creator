@@ -1,0 +1,16 @@
+{
+  "name": "ikiselev1989/sage-acf-gutenberg-blocks",
+  "description": "Library of classes to use gutenberg blocks with acf in sage theme by roots",
+  "type": "library",
+  "require": {
+    "stoutlogic/acf-builder": "^1.9"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ilya Kiselev",
+      "email": "ikiselev1989@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
