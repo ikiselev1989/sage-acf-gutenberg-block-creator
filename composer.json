@@ -1,8 +1,14 @@
 {
-  "name": "ikiselev1989/sage-acf-gutenberg-blocks",
-  "description": "Library of classes to use gutenberg blocks with acf in sage theme by roots",
+  "name": "ik89/sage-acf-gutenberg-blocks-builder",
+  "description": "Library of classes to use Wordpress Gutenberg blocks with ACF in Sage theme by Roots",
+  "keywords": [
+    "wordpress",
+    "gutenberg",
+    "advanced custom fields"
+  ],
   "type": "library",
   "require": {
+    "php": ">=7.1",
     "stoutlogic/acf-builder": "^1.9"
   },
   "license": "MIT",
@@ -12,5 +18,10 @@
       "email": "ikiselev1989@gmail.com"
     }
   ],
-  "minimum-stability": "dev"
+  "autoload": {
+    "psr-4": {
+      "IK89\\SageAcfGutenbergBlocksBuilder\\": "src/"
+    },
+    "files": ["sage-acf-gutenberg-blocks-builder.php"]
+  }
 }
