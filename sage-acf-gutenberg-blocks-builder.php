@@ -12,8 +12,6 @@ if (!function_exists('add_action')) {
     return;
 }
 
-require __DIR__ . '/vendor/autoload.php';
-
 add_filter('gutenberg-blocks-templates-root', function (): string {
     return 'gutenberg-blocks';
 });
