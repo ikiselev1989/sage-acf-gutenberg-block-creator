@@ -8,28 +8,14 @@ abstract class AbstractBlock
 {
     const TEMPLATE_NAME = '';
 
-    protected $data = [
-        'name'            => '',
-        'title'           => '',
-        'description'     => '',
-        'category'        => 'common',
-        'icon'            => '',
-        'mode'            => 'preview',
-        'align'           => '',
-        'keywords'        => [],
-        'supports'        => [],
-        'post_types'      => [],
-        'render_template' => false,
-        'render_callback' => false,
-        'enqueue_style'   => false,
-        'enqueue_script'  => false,
-        'enqueue_assets'  => false,
-    ];
+    protected $data;
 
     /* @var FieldsBuilder $block_fields */
     protected $block_fields;
 
     public function __construct(array $args = []) {
+        $this->data = apply_filters('gutenberg-blocks-default-attributes', []);
+
         $this->data = array_merge($this->data, $args);
 
         $this->data['render_callback'] = [$this, 'render_block'];

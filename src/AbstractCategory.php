@@ -6,13 +6,10 @@ namespace IK89\SageAcfGutenbergBlocksBuilder;
 
 abstract class AbstractCategory
 {
-    protected $data = [
-        'slug'  => '',
-        'title' => '',
-        'icon'  => null,
-    ];
+    protected $data;
 
     public function __construct(array $args = []) {
+        $this->data = apply_filters('gutenberg-blocks-category-default-attributes', []);
         $this->data = array_merge($this->data, $args);
 
         if (empty($this->data['slug']) || empty($this->data['title'])) {
